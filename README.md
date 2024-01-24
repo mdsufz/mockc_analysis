@@ -18,7 +18,13 @@ The running of this repository is meant to happen sequentially in numerical fold
 
 ### Running the Scripts
 To reproduce the results or to conduct further analysis, the user should have a working installation of R version 4.2.1 (although it may also work on previous versions) and the required R packages loaded at the initial run of the script.
-The required R packages are: tidyr v1.2.1, ggplot2 v3.4.0, dplyr v1.0.10, ggpubr v0.5.0, and rstatix v0.7.1
+The required R packages are:
+
+- tidyr v1.2.1
+- ggplot2 v3.4.0
+- dplyr v1.0.10
+- ggpubr v0.5.0
+- rstatix v0.7.1
 
 
 ---
