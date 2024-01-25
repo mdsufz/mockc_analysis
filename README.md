@@ -1,7 +1,5 @@
-# Analysis from the "Simulation of 69 microbial communities indicates sequencing depth and false positives are major drivers of bias in Prokaryotic metagenome-assembled genome recovery." study.
-
 ## Introduction
-This repository contains the R code and data for the research conducted in [Title of Your Paper.............]. 
+This repository contains the R code and data for the research conducted in the "Simulation of 69 microbial communities indicates sequencing depth and false positives are major drivers of bias in Prokaryotic metagenome-assembled genome recovery." study. 
 
 In this study, we tackle MAG recovery knowledge gaps by generating mock communities with varying parameters of sequencing depth, taxonomic distribution relatedness and species abundance profiles. We use these datasets to evaluate three pipelines for binning, each using a different approach to bin the sequences, and assess which factors or combinations of factors drive Prokaryotic MAG recovery and if these are pipeline-dependentpipeline dependent. Additionally, we evaluate the effect of multiple or linear chromosomes in MAG recovery.
 
