@@ -30,5 +30,4 @@ The required R packages are:
 
 **Acknowledgments**: 
 
-[Any acknowledgments to contributors, institutions, funding sources, etc.]
 
