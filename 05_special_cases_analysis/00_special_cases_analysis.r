@@ -7,9 +7,9 @@ library(ggplot2)
 #0.3) Load data
 
 full_results_v2 <-
-  read.csv("joao_scripts/missingfiles/full_results_v2.csv", header = T)
+  read.csv("05_special_cases_analysis/full_results_v2.csv", header = T)
 
-total_coverages <- read.csv("joao_scripts/missingfiles/coverage_table_rstudio.csv",header=T,sep=",")
+total_coverages <- read.csv("05_special_cases_analysis/coverage_table_rstudio.csv",header=T,sep=",")
 
 ####
 #### Analysis of special cases ####
