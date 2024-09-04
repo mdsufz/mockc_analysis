@@ -74,10 +74,7 @@ analyze_pipeline_eve <- function(pipeline_condition) {
     
     stat.test <- results$stat.test %>% rstatix::add_xy_position(x = "Sequencing.Depth")
     final_plot <- myplot + 
-      ggpubr::stat_pvalue_manual(stat.test, label = "p") +
-      labs(subtitle = paste("ANOVA p-values:\nDepth:", format.pval(results$anova_summary[[1]]["Sequencing.Depth", "Pr(>F)"], digits = 3),
-                            "\nEvenness:", format.pval(results$anova_summary[[1]]["Evenness.distribution", "Pr(>F)"], digits = 3),
-                            "\nInteraction:", format.pval(results$anova_summary[[1]]["Sequencing.Depth:Evenness.distribution", "Pr(>F)"], digits = 3)))
+      ggpubr::stat_pvalue_manual(stat.test, label = "p")
     
     print(final_plot)
     
@@ -166,10 +163,7 @@ analyze_specific_condition_eve <- function() {
     anova_p <- results$anova_summary[[1]]["Pipeline", "Pr(>F)"]
     tukey_sig <- sum(results$tukey_result$Pipeline[,"p adj"] < 0.05)
     
-    myplot <- myplot + 
-      labs(subtitle = paste("ANOVA p-value:", format.pval(anova_p, digits = 3), "\n",
-                            "Tukey HSD: ", tukey_sig, "significant pairwise differences"))
-    
+
     return(myplot)
   }
   
@@ -258,10 +252,7 @@ analyze_data_tax <- function(pipeline_condition, value_column) {
     legend = "none"
   ) +
     facet_wrap(~ Taxonomy.distribution) +
-    ggpubr::stat_pvalue_manual(stat.test %>% rstatix::add_xy_position(x = "Evenness.distribution"), label = "p") +
-    labs(subtitle = paste("ANOVA p-values:\nTaxonomy:", format.pval(anova_summary[[1]]["Taxonomy.distribution", "Pr(>F)"], digits = 3),
-                          "\nEvenness:", format.pval(anova_summary[[1]]["Evenness.distribution", "Pr(>F)"], digits = 3),
-                          "\nInteraction:", format.pval(anova_summary[[1]]["Taxonomy.distribution:Evenness.distribution", "Pr(>F)"], digits = 3)))
+    ggpubr::stat_pvalue_manual(stat.test %>% rstatix::add_xy_position(x = "Evenness.distribution"), label = "p")
   
   ggplot2::ggsave(plot_file_name, plot, device = "pdf", width = 10, height = 8)
   
@@ -354,9 +345,6 @@ analyze_data_pipeline_depth_taxo <- function(value_column, pipeline) {
     ) +
     labs(
       title = paste("Comparison of", value_column, "across Taxonomy.distribution"),
-      subtitle = paste("ANOVA p-values: Taxonomy:", format.pval(anova_summary[[1]]["Taxonomy.distribution", "Pr(>F)"], digits = 3),
-                       "Evenness:", format.pval(anova_summary[[1]]["Evenness.distribution", "Pr(>F)"], digits = 3),
-                       "Interaction:", format.pval(anova_summary[[1]]["Taxonomy.distribution:Evenness.distribution", "Pr(>F)"], digits = 3)),
       x = "Taxonomy.distribution",
       y = value_column
     ) +
@@ -504,6 +492,3 @@ analyze_data_pipeline_itself_taxa("Number.of.MAGs")
 analyze_data_pipeline_itself_taxa("Original.taxonomies.found")
 analyze_data_pipeline_itself_taxa("Number.of.False.Positive.Taxonomies")
 analyze_data_pipeline_itself_taxa("Number.of.FalseNegative.Taxonomies")
-
-
-
