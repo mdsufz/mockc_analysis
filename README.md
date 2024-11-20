@@ -6,7 +6,7 @@ In this study, we tackle MAG recovery knowledge gaps by generating mock communit
 For a more detailed explanation of the study, please refer to the original publication
 ## Citation
 
-Nunes da Rocha, U., Coelho Kasmanas, J., Toscan, R., Sanches, D. S., Magnusdottir, S., & Saraiva, J. (2023). Simulation of 69 microbial communities indicates sequencing depth and false positives are major drivers of bias in Prokaryotic metagenome-assembled genome recovery. bioRxiv, 2023-05.
+Rocha U, Kasmanas JC, Toscan R, Sanches DS, Magnusdottir S, Saraiva JP (2024) Simulation of 69 microbial communities indicates sequencing depth and false positives are major drivers of bias in prokaryotic metagenome-assembled genome recovery. PLoS Comput Biol 20(10): e1012530. https://doi.org/10.1371/journal.pcbi.1012530
 
 ## Repository Contents
 
